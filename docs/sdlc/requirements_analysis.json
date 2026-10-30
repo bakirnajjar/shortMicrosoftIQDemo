@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "stage": "requirements_analysis",
+  "source_references": [
+    {
+      "source_type": "user_story",
+      "source_id": "user_story",
+      "locator": "characters 0-8000"
+    }
+  ],
+  "assumptions": [
+    "The owner chose an integrated four-capability bank story after the initial assessment: Fabric IQ for business data and semantics, Foundry IQ for cited institutional knowledge, Work IQ for work context, and Web IQ for public-web intelligence. The platform stage reference schema has no owner-decision source type, so this choice is documented without a fabricated source reference.",
+    "A particular bank process, audience, actor, data set, or decision is not yet selected. Any example used during design is illustrative until the owner confirms it.",
+    "The implementation mode is unresolved: synthetic representations, live services, or a combination are not assumed to have been approved. No access to real bank data, tenant resources, or Microsoft service integrations is established.",
+    "There are no supplied attachments, approved predecessor outputs, or matching curated knowledge references. No quantitative, regulatory, security, availability, or performance targets are inferred from the story."
+  ],
+  "open_questions": [
+    {
+      "question": "Which exact bank workflow, primary actors, and observable task should the integrated walkthrough demonstrate?",
+      "blocking": true,
+      "context": "The story specifies a bank demo but no process or users; the research note's briefing is only an illustration, not a mandated use case."
+    },
+    {
+      "question": "What counts as a full demo: a navigable end-to-end walkthrough, a locally runnable application, a deployed demonstration, live services, or some agreed combination?",
+      "blocking": true,
+      "context": "The execution and completion boundary must be settled before implementation and end-to-end acceptance."
+    },
+    {
+      "question": "For each of Fabric IQ, Foundry IQ, Work IQ, and Web IQ, must the demo use a live integration or a clearly labeled illustrative representation, and what tenant, subscription, credentials, licenses, costs, and preview access are available if live?",
+      "blocking": true,
+      "context": "The four contributions are in scope by owner choice, but service connection and data provenance are not established."
+    },
+    {
+      "question": "If real bank data, documents, employee work context, or live tenant services will be used, what authorization, data classification, privacy, access, retention, audit, geography, and organizational or regulatory constraints apply?",
+      "blocking": true,
+      "context": "This blocks any real-data or live-service design; no such permissions or obligations can be inferred from the story."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "statement": "The demo shall present an end-to-end bank-oriented walkthrough that connects the four IQ contributions to one owner-selected task.",
+      "acceptance_criteria": [
+        "Given an owner-selected bank task and an agreed execution mode, when a viewer completes the walkthrough, then the viewer can identify how Fabric IQ, Foundry IQ, Work IQ, and Web IQ each contribute to that same task."
+      ],
+      "source_references": [
+        {
+          "source_type": "user_story",
+          "source_id": "user_story",
+          "locator": "characters 0-8000"
+        }
+      ]
+    },
+    {
+      "id": "REQ-002",
+      "statement": "The demo shall use executable Python code to provide scenario content consumed by the bank-oriented walkthrough.",
+      "acceptance_criteria": [
+        "Given the agreed runnable demo configuration, when the walkthrough requests scenario content, then executing Python code supplies content that the walkthrough presents."
+      ],
+      "source_references": [
+        {
+          "source_type": "user_story",
+          "source_id": "user_story",
+          "locator": "characters 0-8000"
+        }
+      ]
+    },
+    {
+      "id": "REQ-003",
+      "statement": "The demo shall use a React interface to let a viewer navigate the bank-oriented walkthrough.",
+      "acceptance_criteria": [
+        "Given the agreed runnable demo configuration, when a viewer opens the React interface and follows the walkthrough, then the viewer can reach the four capability contributions without editing application code."
+      ],
+      "source_references": [
+        {
+          "source_type": "user_story",
+          "source_id": "user_story",
+          "locator": "characters 0-8000"
+        }
+      ]
+    },
+    {
+      "id": "REQ-004",
+      "statement": "The demo shall show a bank-relevant business datum together with its defined business meaning as the Fabric IQ contribution.",
+      "acceptance_criteria": [
+        "Given the selected bank scenario, when a viewer inspects the Fabric IQ contribution, then the viewer can see a scenario datum and a corresponding business definition or semantic relationship, with its illustrative or live status identified."
+      ],
+      "source_references": []
+    },
+    {
+      "id": "REQ-005",
+      "statement": "The demo shall show a relevant institutional-knowledge passage with an identifiable document citation as the Foundry IQ contribution.",
+      "acceptance_criteria": [
+        "Given the selected bank scenario, when a viewer inspects the Foundry IQ contribution, then the viewer can see a passage connected to the task and a citation identifying its document, with example material labeled as illustrative rather than actual bank policy."
+      ],
+      "source_references": []
+    },
+    {
+      "id": "REQ-006",
+      "statement": "The demo shall show task-related collaboration or handoff context as the Work IQ contribution.",
+      "acceptance_criteria": [
+        "Given the selected bank scenario, when a viewer inspects the Work IQ contribution, then the viewer can see a collaboration or handoff item relevant to the same task and can distinguish that work context from business data and institutional guidance."
+      ],
+      "source_references": []
+    },
+    {
+      "id": "REQ-007",
+      "statement": "The demo shall show an attributed public-web item relevant to the task as the Web IQ contribution.",
+      "acceptance_criteria": [
+        "Given the selected bank scenario, when a viewer inspects the Web IQ contribution, then the viewer can identify the public source of a task-related item and distinguish it from internal business, document, and work context."
+      ],
+      "source_references": []
+    },
+    {
+      "id": "REQ-008",
+      "statement": "The demo shall distinguish illustrative scenario evidence from evidence retrieved through an actual service.",
+      "acceptance_criteria": [
+        "Given an agreed illustrative, live, or mixed execution mode, when a viewer inspects each displayed contribution, then the viewer can tell whether its content is illustrative or actually retrieved, without an example being presented as a bank record, policy, employee interaction, or live public-web result."
+      ],
+      "source_references": []
+    }
+  ]
+}
